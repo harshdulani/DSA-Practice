@@ -8,6 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE)
 
 # Collect all source files recursively
+## yes I'm globbing because I want all these files to be compiled, 
+## I won't add/ keep files to this project that aren't relevant DSA 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "source/*.cpp")
 file(GLOB_RECURSE HEADERS CONFIGURE_DEPENDS "source/*.h")
 

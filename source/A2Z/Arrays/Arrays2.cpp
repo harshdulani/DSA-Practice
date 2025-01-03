@@ -128,3 +128,55 @@ int Arrays2::KadaneMaxSubarray(const std::vector<int>& nums, int& start, int& en
 	}
 	return maxSum;
 }
+
+int Arrays2::StockBuySell(const std::vector<int>& nums)
+{
+	//https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+	int lo = nums[0];
+	int hi = lo;
+	int maxProfit = 0;
+	for (size_t i = 1; i < nums.size(); ++i)
+	{
+		if (nums[i] > hi)
+		{
+			hi = nums[i];
+			maxProfit = std::max(maxProfit, hi - lo);
+		}
+		else if (nums[i] < lo)
+		{
+			lo = hi = nums[i];
+		}
+	}
+	
+	return maxProfit;
+}
+
+std::vector<int> Arrays2::RearrangeAlternateSigns(const std::vector<int>& nums)
+{
+	// https://www.naukri.com/code360/problems/alternate-numbers_6783445
+	std::vector<int> res (nums.size(), 0);
+
+	int posIdx = 0;
+	int negIdx = 1;
+	
+	for (const int num : nums)
+	{
+		if (num >= 0)
+		{
+			res[posIdx] = num;
+			posIdx += 2;
+		}
+		else
+		{
+			res[negIdx] = num;
+			negIdx += 2;
+		}
+	}
+	
+	return res;
+}
+
+void Arrays2::NextPermutation(const std::vector<int>& nums)
+{
+	
+}

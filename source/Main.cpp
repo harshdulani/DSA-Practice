@@ -13,9 +13,8 @@ void PrintArray(const std::vector<int>& nums)
 
 int main()
 {
-	std::vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
+	std::vector<int> nums = {1, 2, -3, -1, -2, 3};
 
-	std::cout << Arrays2::KadaneMaxSubarray(nums);
-	
+	PrintArray(Arrays2::RearrangeAlternateSigns(nums));
 	return 0;
 }

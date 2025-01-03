@@ -9,4 +9,7 @@ public:
 	static int MajorityElement_Verify(const std::vector<int>& nums);
 	static int KadaneMaxSubarray(const std::vector<int>& nums);
 	static int KadaneMaxSubarray(const std::vector<int>& nums, int& start, int& end);
+	static int StockBuySell(const std::vector<int>& nums);
+	static std::vector<int> RearrangeAlternateSigns(const std::vector<int>& nums);
+	static void NextPermutation(const std::vector<int>& nums);
 };
